@@ -1,5 +1,5 @@
 <?php if ( ! empty($module_details['sections'][$active_section]['shortcuts']) ||  ! empty($module_details['shortcuts'])): ?>
-<nav id="shortcuts"  ng-controller="ShortCuts">
+<nav id="shortcuts" ng-controller="ShortCuts">
 	<ul class="list-unstyled">
 		<?php if ( ! empty($module_details['sections'][$active_section]['shortcuts'])): ?>
 			<?php foreach ($module_details['sections'][$active_section]['shortcuts'] as $shortcut):

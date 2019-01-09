@@ -53,7 +53,7 @@ class Theme_Material extends Theme {
 		{
 			// don't bother fetching the data if it's turned off in the theme
            
-			if ($this->theme_options->pyrocms_analytics_graph == 'yes' AND in_array($this->current_user->group,array('admin')) AND  ENVIRONMENT=='production')		self::get_analytics();
+			//if ($this->theme_options->pyrocms_analytics_graph == 'yes' AND in_array($this->current_user->group,array('admin')) AND  ENVIRONMENT=='production')		self::get_analytics();
 			if ($this->theme_options->pyrocms_news_feed == 'yes' AND in_array($this->current_user->group,array('admin')))			self::get_rss_feed();
 			if ($this->theme_options->pyrocms_recent_comments == 'yes' AND in_array($this->current_user->group,array('admin')))		self::get_recent_comments();
 		}

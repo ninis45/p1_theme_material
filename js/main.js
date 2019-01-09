@@ -24,7 +24,7 @@
       .directive('formatoMoneda',[formatoMoneda])
       .controller('PaginationCtrl',['$scope','$window',PaginationCtrl]);
      
-       function MapMarker()
+     function MapMarker()
        {
             return {
                
@@ -60,7 +60,7 @@
                     var marker = new google.maps.Marker({
             			position: position,
             			map: map,
-            			//title: data.title,
+            		
                         draggable:true,
                         
                         
@@ -88,7 +88,7 @@
                     {
                         ng_model.lng = evt.latLng.lng();
                         ng_model.lat = evt.latLng.lat()
-                       
+                        
                     }
                 }
             }
@@ -132,16 +132,7 @@
                 link:function propiedades(scope,element,attr){
     
                                    
-                 /*function updateValue() 
-                          {
-                    element.text(importe);
-                  }
-    
-                  scope.$watch(attrs.formatoMoneda, function(value) 
-                  {
-                    format = value;
-                    updateValue();
-                  });*/
+                 
                     
                     element.on('focus',function(){
                         var text = $(element).val();
@@ -157,10 +148,10 @@
                          {
     
                          // console.log("El valor " + num + " no es un número");
-                          $(element).val("");
+                            $(element).val('');
                          }
                            else { 
-                                  var separador =  ",", // separador para los miles
+                                  var separador =  ',', // separador para los miles
                                       sepDecimal = '.';
                                  
                                   var splitStr = num.split('.');
@@ -471,8 +462,26 @@
      {
         $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
         
+        //$http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, Authorization, Access-Control-Allow-Origin';
+        //$http.defaults.headers.common['Access-Control-Allow-Origin']='*';
+        //$http.defaults.headers.common['Authorization']='Basic Y29iYWNhbToxcHNrMjM1NQ==';
+        //$http.defaults.headers.common['Access-Control-Allow-Credentials']='true';
+        //$http.defaults.useXDomain = true;
+        
+        
+        
+        //$http.defaults.headers.Authorization='Basic Y29iYWNhbToxcHNrMjM1NQ==';
+        //Access-Control-Allow-Headers : 'Content-Type', 'Authorization'
+        
         $http.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
         
+        //delete $http.defaults.headers.common["X-Requested-With"];
+        // delete $http.defaults.headers.common["Access-Control-Allow-Headers"];
+        
+        //$http.defaults.headers.common['Access-Control-Methods'] = 'GET,HEAD,OPTIONS,POST,PUT';
+        //$http.defaults.headers.common['Access-Control-Headers'] = 'Content-Type,Authorization';
+        
+        //$http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type,Authorization';
         $http.defaults.transformRequest = function(data) {
             
             
@@ -482,7 +491,7 @@
            } 
            
            data['csrf_hash_name']=$cookies.get(pyro.csrf_cookie_name);
-           
+          
            var new_data=$.param(data);
            
            

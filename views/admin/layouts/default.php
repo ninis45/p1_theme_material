@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
         <title><?php echo $template['title'].' - '.lang('cp:admin_title') ?></title>
-        <meta name="description" content="Responsive Admin Web App with Bootstrap and AngularJS">
-        <meta name="keywords" content="angularjs admin, admin templates, admin themes, bootstrap admin">
+        <meta name="description" content="Adminstrador,cobacam">
+        <meta name="keywords" content="cobacam">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
         <!-- Needs images, font... therefore can not be part of main.css -->
@@ -96,8 +96,8 @@
                                 
                             </div>
                             <div class="modal-footer">
-                                <button ui-wave class="btn btn-flat btn-default" ng-click="cancel()"><?=lang('cancel_label')?></button>
-                                <button ui-wave class="btn btn-flat btn-primary" ng-click="action()" ng-if="show_action">Aceptar</button>
+                                <button ui-wave class="btn btn-flat btn-default" ng-click="cancel()">Cancel</button>
+                                <button ui-wave class="btn btn-flat btn-primary" ng-click="action()" ng-if="controller">Aceptar</button>
                             </div>
                 </script>
                 

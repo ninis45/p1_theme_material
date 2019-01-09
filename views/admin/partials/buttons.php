@@ -28,7 +28,7 @@
 				if($btn_class == 'md-raised btn-w-md md-ink-ripple') $btn_class .= ' md-warn';
 			
 			?>
-				<button type="submit" name="btnAction" value="delete" class="<?php echo $btn_class; ?>" confirm-action>
+				<button type="submit" name="btnAction" value="delete" class="<?php echo $btn_class; ?> confirm">
 					<span><?php echo lang('buttons:delete'); ?></span>
 				</button>
 				<?php break;
@@ -45,7 +45,7 @@
 			case 'save_exit':
 			case 'unapprove':
 			case 'upload': ?>
-				<button type="submit" name="btnAction" confirm-action value="<?php echo $button ?>" class="<?php echo $btn_class; ?> btn-success">
+				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="<?php echo $btn_class; ?> btn-success">
 					<span><?php echo lang('buttons:' . $button); ?></span>
 				</button>
                 

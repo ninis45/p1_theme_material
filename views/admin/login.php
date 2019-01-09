@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
        	<title><?php echo $this->settings->site_name; ?> - <?php echo lang('login_title');?></title>
-        <meta name="description" content="Responsive Admin Web App with Bootstrap and AngularJS">
-        <meta name="keywords" content="angularjs admin, admin templates, admin themes, bootstrap admin">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Panel de administración del COBACAM"/>
+        <meta name="keywords" content="administrador,cobacam">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
         <!-- Needs images, font... therefore can not be part of main.css -->
         <link rel="stylesheet" href="styles/loader.css">
